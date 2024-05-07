@@ -18,8 +18,8 @@ Now that the Azure Native package is installed, add the following lines to `inde
 
 ```ts
 ...
-import * as resources from "@pulumi/azure-native/resources/latest";
-import * as storage from "@pulumi/azure-native/storage/latest";
+import * as resources from "@pulumi/azure-native/resources";
+import * as storage from "@pulumi/azure-native/storage";
 ```
 
 ## Step 3 &mdash; Login to Azure

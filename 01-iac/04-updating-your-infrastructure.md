@@ -36,7 +36,7 @@ Updating (dev):
 
      Type                                            Name              Status
      pulumi:pulumi:Stack                             iac-workshop-dev
- +   └─ azure-native:storage/latest:StorageAccount  mystorage         created
+ +   └─ azure-native:storage:StorageAccount  mystorage         created
 
 Resources:
     + 1 created
@@ -119,7 +119,7 @@ Updating (dev):
 
      Type                                           Name              Status
      pulumi:pulumi:Stack                            iac-workshop-dev
- +   └─ azure-native:storage/latest:BlobContainer  mycontainer       created
+ +   └─ azure-native:storage:BlobContainer  mycontainer       created
 
 Resources:
     + 1 created

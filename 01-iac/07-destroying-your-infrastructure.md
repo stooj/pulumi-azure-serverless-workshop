@@ -17,9 +17,9 @@ Previewing destroy (prod):
 
      Type                         Name               Plan
  -   pulumi:pulumi:Stack                              iac-workshop-prod  delete     
- -   ├─ azure-native:storage/latest:BlobContainer    mycontainer        delete     
- -   ├─ azure-native:storage/latest:StorageAccount   mystorage          delete     
- -   └─ azure-native:resources/latest:ResourceGroup  my-group           delete
+ -   ├─ azure-native:storage:BlobContainer    mycontainer        delete     
+ -   ├─ azure-native:storage:StorageAccount   mystorage          delete     
+ -   └─ azure-native:resources:ResourceGroup  my-group           delete
 
 Outputs:
   - AccountName: "myuniquename"
@@ -40,9 +40,9 @@ Destroying (prod):
 
      Type                                             Name               Status
  -   pulumi:pulumi:Stack                              iac-workshop-prod  deleted
- -   ├─ azure-native:storage/latest:BlobContainer    mycontainer        deleted     
- -   ├─ azure-native:storage/latest:StorageAccount   mystorage          deleted     
- -   └─ azure-native:resources/latest:ResourceGroup  my-group           deleted
+ -   ├─ azure-native:storage:BlobContainer    mycontainer        deleted     
+ -   ├─ azure-native:storage:StorageAccount   mystorage          deleted     
+ -   └─ azure-native:resources:ResourceGroup  my-group           deleted
 
 Outputs:
   - AccountName: "myuniquename"
