@@ -17,7 +17,7 @@ Remove all the code from `index.ts`.
 Create a new file called `common.ts` in the same `statusapp` folder where `index.ts` exists. Add the following lines to it:
 
 ```ts
-import * as resources from "@pulumi/azure-nextgen/resources/latest";
+import * as resources from "@pulumi/azure-native/resources/latest";
 
 export const appName = "status";
 
@@ -44,9 +44,9 @@ import "./common";
 These resources are very familiar to you by now. Create a `functionApp.ts` file with the following lines:
 
 ```ts
-import * as insights from "@pulumi/azure-nextgen/insights/latest";
-import * as storage from "@pulumi/azure-nextgen/storage/latest";
-import * as web from "@pulumi/azure-nextgen/web/latest";
+import * as insights from "@pulumi/azure-native/insights/latest";
+import * as storage from "@pulumi/azure-native/storage/latest";
+import * as web from "@pulumi/azure-native/web/latest";
 import { appName, location, resourceGroupName } from "./common";
 
 const droneStatusStorageAccount = new storage.StorageAccount(`${appName}sa`, {
@@ -166,11 +166,11 @@ $ pulumi up
 Updating (dev):
      Type                                             Name           Status      
      pulumi:pulumi:Stack                              statusapp-dev              
- +   ├─ azure-nextgen:resources/latest:ResourceGroup  status-rg      created     
- +   ├─ azure-nextgen:insights/latest:Component       status-ai      created     
- +   ├─ azure-nextgen:web/latest:AppServicePlan       status-asp     created     
- +   ├─ azure-nextgen:storage/latest:StorageAccount   statussa       created     
- +   └─ azure-nextgen:web/latest:WebApp               status-app     created   
+ +   ├─ azure-native:resources/latest:ResourceGroup  status-rg      created     
+ +   ├─ azure-native:insights/latest:Component       status-ai      created     
+ +   ├─ azure-native:web/latest:AppServicePlan       status-asp     created     
+ +   ├─ azure-native:storage/latest:StorageAccount   statussa       created     
+ +   └─ azure-native:web/latest:WebApp               status-app     created   
  
 Outputs:
     functionUrl: "https://status-app47012f49.azurewebsites.net/api/GetStatusFunction?deviceId="

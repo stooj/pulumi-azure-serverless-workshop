@@ -1,7 +1,7 @@
 import * as azure from "@pulumi/azure";
 import * as azuread from "@pulumi/azuread";
 import * as pulumi from "@pulumi/pulumi";
-import * as cdn from "@pulumi/azure-nextgen/cdn/latest";
+import * as cdn from "@pulumi/azure-native/cdn/latest";
 import { appName, location, resourceGroupName } from "./common";
 
 export const storageAccount = new azure.storage.Account(`${appName}fe`, {

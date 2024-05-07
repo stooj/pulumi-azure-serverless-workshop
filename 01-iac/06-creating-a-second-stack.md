@@ -47,9 +47,9 @@ Updating (prod):
 
      Type                                             Name               Status
  +   pulumi:pulumi:Stack                              iac-workshop-prod  created
- +   ├─ azure-nextgen:resources/latest:ResourceGroup  my-group           created     
- +   ├─ azure-nextgen:storage/latest:StorageAccount   mystorage          created     
- +   └─ azure-nextgen:storage/latest:BlobContainer    mycontainer        created
+ +   ├─ azure-native:resources/latest:ResourceGroup  my-group           created     
+ +   ├─ azure-native:storage/latest:StorageAccount   mystorage          created     
+ +   └─ azure-native:storage/latest:BlobContainer    mycontainer        created
 
 Outputs:
     AccountName: "myuniquenameprod"

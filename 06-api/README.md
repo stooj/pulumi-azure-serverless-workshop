@@ -23,7 +23,7 @@ Create a new file called `api.ts` in the same `statusapp` folder. Add the follow
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
-import * as apimanagement from "@pulumi/azure-nextgen/apimanagement/latest";
+import * as apimanagement from "@pulumi/azure-native/apimanagement/latest";
 import * as azure from "@pulumi/azure";
 import { appName, location, resourceGroupName } from "./common";
 import * as functionApp from "./functionApp";
@@ -180,7 +180,7 @@ const productApi = new azure.apimanagement.ProductApi("dronedeliveryapiv1", {
 });
 ```
 
-Note that the product API is defined using a resource from the Terraform-based Azure provider due a limitation in the current version of the Azure NextGen provider.
+Note that the product API is defined using a resource from the Terraform-based Azure provider due a limitation in the current version of the Azure Native provider.
 
 Finally, export the API URL:
 
@@ -218,17 +218,17 @@ $ pulumi up
 Updating (dev):
      Type                                                        Name                                            Status
      pulumi:pulumi:Stack                                         workshop-nextgen-status-dev                                        
- +   └─ azure-nextgen:apimanagement/latest:ApiManagementService  status-apim                                     created
- +   ├─ azure-nextgen:apimanagement/latest:Product               dronedeliveryprodapi                            created    
- +   ├─ azure-nextgen:apimanagement/latest:ApiVersionSet         dronestatusversionset                           created    
- +   ├─ azure-nextgen:apimanagement/latest:Backend               dronestatusdotnet                               created    
- +   ├─ azure-nextgen:apimanagement/latest:Api                   dronedeliveryapiv1                              created    
+ +   └─ azure-native:apimanagement/latest:ApiManagementService  status-apim                                     created
+ +   ├─ azure-native:apimanagement/latest:Product               dronedeliveryprodapi                            created    
+ +   ├─ azure-native:apimanagement/latest:ApiVersionSet         dronestatusversionset                           created    
+ +   ├─ azure-native:apimanagement/latest:Backend               dronestatusdotnet                               created    
+ +   ├─ azure-native:apimanagement/latest:Api                   dronedeliveryapiv1                              created    
      ├─ azure:storage:Account                                    statusfe                                                                
  +-  │  ├─ azure:storage:Blob                                    component---src-pages-index-tsx-5b72260.js      replaced 
  +-  │  └─ azure:storage:Blob                                    component---src-pages-index-tsx-5b72260.js.map  replaced 
  +   ├─ azure:apimanagement:ProductApi                           dronedeliveryapiv1                              created    
- +   ├─ azure-nextgen:apimanagement/latest:ApiPolicy             policy                                          created    
- +   └─ azure-nextgen:apimanagement/latest:ApiOperation          dronestatusGET                                  created     
+ +   ├─ azure-native:apimanagement/latest:ApiPolicy             policy                                          created    
+ +   └─ azure-native:apimanagement/latest:ApiOperation          dronestatusGET                                  created     
  
 Outputs:
     functionUrl      : "https://status-app471111f49.azurewebsites.net/api/GetStatusFunction?deviceId="

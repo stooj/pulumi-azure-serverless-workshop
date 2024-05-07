@@ -1,5 +1,5 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as documentdb from "@pulumi/azure-nextgen/documentdb/latest";
+import * as documentdb from "@pulumi/azure-native/documentdb/latest";
 import { appName, location, resourceGroupName } from "./common";
 
 const databaseAccount = new documentdb.DatabaseAccount(`${appName}-acc`, {

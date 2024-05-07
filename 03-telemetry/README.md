@@ -7,7 +7,7 @@ Create a new Pulumi project called `telemetry` from your root workshop folder:
 ```bash
 mkdir telemetry
 cd telemetry
-pulumi new azure-nextgen-typescript -y
+pulumi new azure-native-typescript -y
 ```
 
 Remove all the code from `index.ts`: this time, we'll structure the program differently. In this lab, you need to create resources in three functional areas: Cosmos DB, Event Hubs, and Function Apps. Let's split these resources into five TypeScript files:
@@ -23,7 +23,7 @@ Remove all the code from `index.ts`: this time, we'll structure the program diff
 Create a new file called `common.ts` in the same `telemetry` folder where `index.ts` exists. Add the following lines to it:
 
 ```ts
-import * as resources from "@pulumi/azure-nextgen/resources/latest";
+import * as resources from "@pulumi/azure-native/resources/latest";
 
 export const appName = "telemetry";
 
@@ -58,7 +58,7 @@ Create a new file `cosmos.ts`. Use the following import statements to load Pulum
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
-import * as documentdb from "@pulumi/azure-nextgen/documentdb/latest";
+import * as documentdb from "@pulumi/azure-native/documentdb/latest";
 import { appName, location, resourceGroupName } from "./common";
 ```
 
@@ -158,10 +158,10 @@ $ pulumi up
 Updating (dev):
      Type                                                              Name           Plan       
  +   pulumi:pulumi:Stack                                               telemetry-dev  created    
- +   ├─ azure-nextgen:resources/latest:ResourceGroup                   telemetry-rg   created    
- +   └─ azure-nextgen:documentdb/latest:DatabaseAccount                telemetry-acc  created    
- +      └─ azure-nextgen:documentdb/latest:SqlResourceSqlDatabase      db             created    
- +         └─ azure-nextgen:documentdb/latest:SqlResourceSqlContainer  items          created    
+ +   ├─ azure-native:resources/latest:ResourceGroup                   telemetry-rg   created    
+ +   └─ azure-native:documentdb/latest:DatabaseAccount                telemetry-acc  created    
+ +      └─ azure-native:documentdb/latest:SqlResourceSqlDatabase      db             created    
+ +         └─ azure-native:documentdb/latest:SqlResourceSqlContainer  items          created    
  
 Resources:
     + 5 created
@@ -179,7 +179,7 @@ Create a new file `eventHub.ts` and initialize its imports:
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
-import * as eventhub from "@pulumi/azure-nextgen/eventhub/latest";
+import * as eventhub from "@pulumi/azure-native/eventhub/latest";
 import { appName, location, resourceGroupName } from "./common";
 ```
 
@@ -292,9 +292,9 @@ Create a new file `functionApp.ts` and add these import lines:
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
-import * as insights from "@pulumi/azure-nextgen/insights/latest";
-import * as storage from "@pulumi/azure-nextgen/storage/latest";
-import * as web from "@pulumi/azure-nextgen/web/latest";
+import * as insights from "@pulumi/azure-native/insights/latest";
+import * as storage from "@pulumi/azure-native/storage/latest";
+import * as web from "@pulumi/azure-native/web/latest";
 import { appName, location, resourceGroupName } from "./common";
 import * as cosmos from "./cosmos";
 import * as eventHub from "./eventHub";
@@ -425,16 +425,16 @@ $ pulumi up
 Updating (dev):
      Type                                                              Name            Status      
      pulumi:pulumi:Stack                                               telemetry-dev               
- +   ├─ azure-nextgen:web/latest:AppServicePlan                        telemetry-asp   create     
- +   ├─ azure-nextgen:eventhub/latest:Namespace                        telemetry-ns    create     
- +   │  └─ azure-nextgen:eventhub/latest:EventHub                      telemetry-eh    create     
- +   │     ├─ azure-nextgen:eventhub/latest:ConsumerGroup              dronetelemetry  create     
- +   │     ├─ azure-nextgen:eventhub/latest:EventHubAuthorizationRule  send            create     
- +   │     └─ azure-nextgen:eventhub/latest:EventHubAuthorizationRule  listen          create     
- +   ├─ azure-nextgen:insights/latest:Component                        telemetry-ai    create     
- +   ├─ azure-nextgen:storage/latest:StorageAccount                    telemetrydlq    create     
- +   ├─ azure-nextgen:storage/latest:StorageAccount                    telemetrysa     create     
- +   └─ azure-nextgen:web/latest:WebApp                                telemetry-app   create     
+ +   ├─ azure-native:web/latest:AppServicePlan                        telemetry-asp   create     
+ +   ├─ azure-native:eventhub/latest:Namespace                        telemetry-ns    create     
+ +   │  └─ azure-native:eventhub/latest:EventHub                      telemetry-eh    create     
+ +   │     ├─ azure-native:eventhub/latest:ConsumerGroup              dronetelemetry  create     
+ +   │     ├─ azure-native:eventhub/latest:EventHubAuthorizationRule  send            create     
+ +   │     └─ azure-native:eventhub/latest:EventHubAuthorizationRule  listen          create     
+ +   ├─ azure-native:insights/latest:Component                        telemetry-ai    create     
+ +   ├─ azure-native:storage/latest:StorageAccount                    telemetrydlq    create     
+ +   ├─ azure-native:storage/latest:StorageAccount                    telemetrysa     create     
+ +   └─ azure-native:web/latest:WebApp                                telemetry-app   create     
  
 Outputs:
   + eventHubNamespace           : "telemetry-ns24c12345"

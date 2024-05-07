@@ -12,7 +12,7 @@ Extend the existing `website.ts` file with these resources:
 
 ```ts
 import * as pulumi from "@pulumi/pulumi";
-import * as cdn from "@pulumi/azure-nextgen/cdn/latest";
+import * as cdn from "@pulumi/azure-native/cdn/latest";
 import { appName, location, resourceGroupName } from "./common";
 
 const cdnProfile = new cdn.Profile("profile", {
@@ -71,9 +71,9 @@ $ pulumi up
 Updating (dev):
      Type                                             Name             Status      Info
      pulumi:pulumi:Stack                              statusapp-dev              
- +   ├─ azure-nextgen:cdn/latest:Profile              profile          created
- +   ├─ azure-nextgen:cdn/latest:Endpoint             endpoint         created     
- ~   └─ azure-nextgen:apimanagement/latest:ApiPolicy  policy           updated    [diff: ~value]
+ +   ├─ azure-native:cdn/latest:Profile              profile          created
+ +   ├─ azure-native:cdn/latest:Endpoint             endpoint         created     
+ ~   └─ azure-native:apimanagement/latest:ApiPolicy  policy           updated    [diff: ~value]
  
 Outputs:
   + cdnUrl           : "https://endpoint0962acd7.azureedge.net"

@@ -4,7 +4,7 @@ In this lab, you will extend the `statusapp` project to add an HTML frontend app
 
 ## Step 1 &mdash; Install Azure Provider
 
-Azure NextGen provider is designed to expose the API of Azure Resource Manager (ARM). Currently, ARM does not contain operations required to setup a static website on a Storage Account: those operations belong to the data plane and storage-specific SDKs. Therefore, the Azure NextGen provider doesn't suppose them either.
+Azure Native provider is designed to expose the API of Azure Resource Manager (ARM). Currently, ARM does not contain operations required to setup a static website on a Storage Account: those operations belong to the data plane and storage-specific SDKs. Therefore, the Azure Native provider doesn't suppose them either.
 
 However, the Terraform-based "Azure" provider does support Storage Static Websites.
 

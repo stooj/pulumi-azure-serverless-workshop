@@ -69,7 +69,7 @@ Updating (dev):
 
      Type                                           Name              Status      Info
      pulumi:pulumi:Stack                            iac-workshop-dev
-  +- └─ azure-nextgen:storage/latest:BlobContainer  mycontainer       replaced    [diff: ~containerName]
+  +- └─ azure-native:storage/latest:BlobContainer  mycontainer       replaced    [diff: ~containerName]
 
 Outputs:
     AccountName: "myuniquename"

@@ -1,7 +1,7 @@
 import * as pulumi from "@pulumi/pulumi";
-import * as insights from "@pulumi/azure-nextgen/insights/latest";
-import * as storage from "@pulumi/azure-nextgen/storage/latest";
-import * as web from "@pulumi/azure-nextgen/web/latest";
+import * as insights from "@pulumi/azure-native/insights/latest";
+import * as storage from "@pulumi/azure-native/storage/latest";
+import * as web from "@pulumi/azure-native/web/latest";
 import { appName, location, resourceGroupName } from "./common";
 import * as cosmos from "./cosmos";
 import * as eventHub from "./eventHub";
