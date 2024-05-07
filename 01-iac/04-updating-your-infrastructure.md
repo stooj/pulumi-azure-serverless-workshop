@@ -128,6 +128,7 @@ Resources:
 Duration: 9s
 
 Permalink: https://app.pulumi.com/myuser/iac-workshop/dev/updates/4
+```
 
 Finally, relist the contents of your account:
 
