@@ -41,7 +41,7 @@ There’s no resource named Consumption Plan, however. The resource name is inhe
 Here is a snippet that defines a Consumption Plan:
 
 ```ts
-import * as web from "@pulumi/azure-native/web/latest";
+import * as web from "@pulumi/azure-native/web";
 
 const plan = new web.AppServicePlan("asp", {
     resourceGroupName: resourceGroup.name,
@@ -149,10 +149,10 @@ Updating (dev):
 
      Type                                             Name              Status
 +   pulumi:pulumi:Stack                               iac-workshop-dev  created
- +   ├─ azure-native:resources/latest:ResourceGroup  my-group          created                 
- +   ├─ azure-native:storage/latest:StorageAccount   mystorage         created                 
- +   ├─ azure-native:web/latest:AppServicePlan       asp               created                 
- +   └─ azure-native:web/latest:WebApp               fa                created
+ +   ├─ azure-native:resources:ResourceGroup  my-group          created                 
+ +   ├─ azure-native:storage:StorageAccount   mystorage         created                 
+ +   ├─ azure-native:web:AppServicePlan       asp               created                 
+ +   └─ azure-native:web:WebApp               fa                created
 
 Outputs:
     endpoint: "https://myuniqueapp.azurewebsites.net/api/hello"
