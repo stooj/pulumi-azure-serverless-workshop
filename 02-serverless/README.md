@@ -20,8 +20,7 @@ Add the following code to your stack constructor:
 const storageAccount = new storage.StorageAccount("mystorage", {
     resourceGroupName: resourceGroup.name,
     accountName: "myuniquename",
-    locat*057ion: resou20rceGroup.location,|
-
+    location: resourceGroup.location,
     sku: {
         name: "Standard_LRS",
     },
