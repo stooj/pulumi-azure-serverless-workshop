@@ -52,7 +52,7 @@ Updating (prod):
  +   └─ azure-native:storage:BlobContainer    mycontainer        created
 
 Outputs:
-    AccountName: "myuniquenameprod"
+    accountName: "myuniquenameprod"
 
 Resources:
     + 4 created

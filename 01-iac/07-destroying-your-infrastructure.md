@@ -22,7 +22,7 @@ Previewing destroy (prod):
  -   └─ azure-native:resources:ResourceGroup  my-group           delete
 
 Outputs:
-  - AccountName: "myuniquename"
+  - accountName: "myuniquename"
 
 Resources:
     - 4 to delete
@@ -45,7 +45,7 @@ Destroying (prod):
  -   └─ azure-native:resources:ResourceGroup  my-group           deleted
 
 Outputs:
-  - AccountName: "myuniquename"
+  - accountName: "myuniquename"
 
 Resources:
     - 4 deleted
