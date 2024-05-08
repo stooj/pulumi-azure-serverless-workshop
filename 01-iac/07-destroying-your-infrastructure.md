@@ -16,9 +16,9 @@ This will show you a preview, much like the `pulumi up` command does:
 Previewing destroy (prod):
 
      Type                         Name               Plan
- -   pulumi:pulumi:Stack                              iac-workshop-prod  delete     
- -   ├─ azure-native:storage:BlobContainer    mycontainer        delete     
- -   ├─ azure-native:storage:StorageAccount   mystorage          delete     
+ -   pulumi:pulumi:Stack                              iac-workshop-prod  delete
+ -   ├─ azure-native:storage:BlobContainer    mycontainer        delete
+ -   ├─ azure-native:storage:StorageAccount   mystorage          delete
  -   └─ azure-native:resources:ResourceGroup  my-group           delete
 
 Outputs:
@@ -40,8 +40,8 @@ Destroying (prod):
 
      Type                                             Name               Status
  -   pulumi:pulumi:Stack                              iac-workshop-prod  deleted
- -   ├─ azure-native:storage:BlobContainer    mycontainer        deleted     
- -   ├─ azure-native:storage:StorageAccount   mystorage          deleted     
+ -   ├─ azure-native:storage:BlobContainer    mycontainer        deleted
+ -   ├─ azure-native:storage:StorageAccount   mystorage          deleted
  -   └─ azure-native:resources:ResourceGroup  my-group           deleted
 
 Outputs:

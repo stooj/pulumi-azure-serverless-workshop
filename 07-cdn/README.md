@@ -70,11 +70,11 @@ $ pulumi up
 ...
 Updating (dev):
      Type                                             Name             Status      Info
-     pulumi:pulumi:Stack                              statusapp-dev              
+     pulumi:pulumi:Stack                              statusapp-dev
  +   ├─ azure-native:cdn/latest:Profile              profile          created
- +   ├─ azure-native:cdn/latest:Endpoint             endpoint         created     
+ +   ├─ azure-native:cdn/latest:Endpoint             endpoint         created
  ~   └─ azure-native:apimanagement/latest:ApiPolicy  policy           updated    [diff: ~value]
- 
+
 Outputs:
   + cdnUrl           : "https://endpoint0962acd7.azureedge.net"
     functionUrl      : "https://status-app47000f49.azurewebsites.net/api/GetStatusFunction?deviceId="

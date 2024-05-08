@@ -13,7 +13,7 @@ const droneStatusStorageAccount = new storage.StorageAccount(`${appName}sa`, {
     kind: "StorageV2",
     tags: {
         displayName: "Drone Status Function App",
-    },    
+    },
 });
 
 const droneStatusAppInsights = new insights.Component(`${appName}-ai`, {

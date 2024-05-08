@@ -42,11 +42,11 @@ const app = new web.WebApp("fa", {
     kind: "functionapp",
     siteConfig: {
         appSettings: [
-            { name: "AzureWebJobsStorage", value: storageConnectionString },            
-            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },            
+            { name: "AzureWebJobsStorage", value: storageConnectionString },
+            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },
             { name: "FUNCTIONS_WORKER_RUNTIME", value: "node" },
             { name: "WEBSITE_NODE_DEFAULT_VERSION", value: "10.14.1" },
             { name: "WEBSITE_RUN_FROM_PACKAGE", value: "https://mikhailworkshop.blob.core.windows.net/zips/app.zip" },
-        ]    
+        ]
     },
 });

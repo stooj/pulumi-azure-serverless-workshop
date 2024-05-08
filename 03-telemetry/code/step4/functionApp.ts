@@ -27,7 +27,7 @@ const droneTelemetryStorageAccount = new storage.StorageAccount(`${appName}sa`, 
     accountName: `${appName}funcappsa`,
     tags: {
         displayName: "Drone Telemetry Function App Storage",
-    },    
+    },
     ...storageAccountType,
 });
 
@@ -36,7 +36,7 @@ const droneTelemetryDeadLetterStorageQueueAccount = new storage.StorageAccount(`
     accountName: `${appName}dlqsa`,
     tags: {
         displayName: "Drone Telemetry DLQ Storage",
-    },    
+    },
     ...storageAccountType,
 });
 
@@ -79,11 +79,11 @@ const droneTelemetryFunctionApp = new web.WebApp(`${appName}-app`, {
             { name: "EventHubConnection", value: eventHub.listenConnectionString },
             { name: "EventHubConsumerGroup", value: eventHub.consumerGroupName },
             { name: "EventHubName", value: eventHub.name },
-            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },            
+            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },
             { name: "FUNCTIONS_WORKER_RUNTIME", value: "dotnet" },
             { name: "WEBSITE_NODE_DEFAULT_VERSION", value: "10.14.1" },
             { name: "WEBSITE_RUN_FROM_PACKAGE", value: "https://mikhailworkshop.blob.core.windows.net/zips/telemetryapp.zip" },
-        ]    
+        ]
     },
     tags: {
         displayName: "Drone Telemetry Function App",

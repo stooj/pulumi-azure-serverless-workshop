@@ -62,7 +62,7 @@ Note the specific way that the property `sku` is configured. If you ever want to
 
 We need to pass a Storage Account connection string to the settings of our future Function App. As this information is sensitive, Azure doesn't return it by default in the outputs of the Storage Account resource.
 
-We need to make a separate invocation to the `listStorageAccountKeys` function to retrieve storage account keys. This invocation can only be run after the storage account is created. Therefore, we must place it inside an `apply` call that depends on a storage account 
+We need to make a separate invocation to the `listStorageAccountKeys` function to retrieve storage account keys. This invocation can only be run after the storage account is created. Therefore, we must place it inside an `apply` call that depends on a storage account
 
 
 
@@ -94,12 +94,12 @@ const app = new web.WebApp("fa", {
     kind: "functionapp",
     siteConfig: {
         appSettings: [
-            { name: "AzureWebJobsStorage", value: storageConnectionString },            
-            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },            
+            { name: "AzureWebJobsStorage", value: storageConnectionString },
+            { name: "FUNCTIONS_EXTENSION_VERSION", value: "~3" },
             { name: "FUNCTIONS_WORKER_RUNTIME", value: "node" },
             { name: "WEBSITE_NODE_DEFAULT_VERSION", value: "10.14.1" },
             { name: "WEBSITE_RUN_FROM_PACKAGE", value: "https://mikhailworkshop.blob.core.windows.net/zips/app.zip" },
-        ]    
+        ]
     },
 });
 ```
@@ -149,9 +149,9 @@ Updating (dev):
 
      Type                                             Name              Status
 +   pulumi:pulumi:Stack                               iac-workshop-dev  created
- +   ├─ azure-native:resources:ResourceGroup  my-group          created                 
- +   ├─ azure-native:storage:StorageAccount   mystorage         created                 
- +   ├─ azure-native:web:AppServicePlan       asp               created                 
+ +   ├─ azure-native:resources:ResourceGroup  my-group          created
+ +   ├─ azure-native:storage:StorageAccount   mystorage         created
+ +   ├─ azure-native:web:AppServicePlan       asp               created
  +   └─ azure-native:web:WebApp               fa                created
 
 Outputs:

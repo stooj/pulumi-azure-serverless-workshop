@@ -17,7 +17,7 @@ const databaseAccount = new documentdb.DatabaseAccount(`${appName}-acc`, {
 });
 
 export const databaseName = "db";
-const database = new documentdb.SqlResourceSqlDatabase(databaseName, {    
+const database = new documentdb.SqlResourceSqlDatabase(databaseName, {
     databaseName: databaseName,
     resourceGroupName: resourceGroupName,
     accountName: databaseAccount.name,

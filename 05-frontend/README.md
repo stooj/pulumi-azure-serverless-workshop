@@ -26,7 +26,7 @@ export const storageAccount = new azure.storage.Account(`${appName}fe`, {
     resourceGroupName: resourceGroupName,
     tags: {
         displayName: "Drone Front End Storage Account",
-    },    
+    },
     accountTier: "Standard",
     accountReplicationType: "LRS",
     staticWebsite: {
@@ -132,12 +132,12 @@ Deploy the stack
 $ pulumi up
 ...
 Updating (dev):
-     Type                             Name           Status      
- +   pulumi:pulumi:Stack              statusapp-dev  created     
- +   └─ azure:storage:Account         statusfe       created     
- +      ├─ azure:storage:Blob         chunk-map.json created    
-...    
- 
+     Type                             Name           Status
+ +   pulumi:pulumi:Stack              statusapp-dev  created
+ +   └─ azure:storage:Account         statusfe       created
+ +      ├─ azure:storage:Blob         chunk-map.json created
+...
+
 Outputs:
   + storageAccountUrl: "https://statusfe1267cccd.z6.web.core.windows.net/"
 

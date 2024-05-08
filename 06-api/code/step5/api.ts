@@ -111,7 +111,7 @@ const product = new apimanagement.Product("dronedeliveryprodapi", {
     displayName: "drone delivery product api",
     description: "drone delivery product api",
     terms: "terms for example product",
-    subscriptionRequired: false,    
+    subscriptionRequired: false,
     state: "published",
 });
 

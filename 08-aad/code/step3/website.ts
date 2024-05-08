@@ -8,7 +8,7 @@ export const storageAccount = new azure.storage.Account(`${appName}fe`, {
     resourceGroupName: resourceGroupName,
     tags: {
         displayName: "Drone Front End Storage Account",
-    },    
+    },
     accountTier: "Standard",
     accountReplicationType: "LRS",
     staticWebsite: {
@@ -46,10 +46,10 @@ const apiApp = new azuread.Application(apiAppName, {
     oauth2AllowImplicitFlow: true,
     replyUrls: [storageAccountUrl, cdnUrl],
     identifierUris: [`http://${apiAppName}`],
-    appRoles: [{  
-        allowedMemberTypes: [ "User" ], 
-        description:"Access to device status", 
-        displayName:"Get Device Status", 
+    appRoles: [{
+        allowedMemberTypes: [ "User" ],
+        description:"Access to device status",
+        displayName:"Get Device Status",
         isEnabled:true,
         value: "GetStatus",
     }],
