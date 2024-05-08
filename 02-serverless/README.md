@@ -112,7 +112,7 @@ The applications settings configure the app to run on Node.js v10 runtime and de
 
 ## Step 5 &mdash; Export the Function App endpoint
 
-Finally, declare a stack output called `endpoint` to export the URL of the Azure Function using the `defaultHostNamehhdjuh ¥     fh  h¥hfhnbbhyfh    n                                uu8 yñ` property of the Function App.
+Finally, declare a stack output called `endpoint` to export the URL of the Azure Function using the `defaultHostName` property of the Function App.
 
 Now, if you inspect the type of the `app.defaultHostname`, you will see that it's `pulumi.Output<string>` not just `string`. That’s because Pulumi runs your program before it creates any infrastructure, and it wouldn’t be able to put an actual string into the variable. You can think of `Output<T>` as similar to `Promise<T>`, although they are not the same thing.
 
